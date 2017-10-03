@@ -99,9 +99,10 @@
 					uiid="ui.findmelocator.start.view" 
 					parent="me" 
 					type="NAVIGATE"/>
+		
 					  
 		<!-- Form Fields -->		
-		<instruction text="You're device's information" />	  
+		<instruction text="Search for Offices" />	  
 				  
 	  	<controls key="info"
 				  type="LABEL"

@@ -1,5 +1,6 @@
 package za.co.fnb.findmelocator.ocep.views;
 
+import za.co.fnb.pe.framework.api.UIViewContext;
 import za.co.fnb.pe.framework.util.views.ISView;
 
 /**
@@ -9,11 +10,9 @@ import za.co.fnb.pe.framework.util.views.ISView;
  */
 public class OfficeLocatorSearchView extends ISView {
 
-	/**
-	 * 
-	 */
-	public OfficeLocatorSearchView() {
-		// TODO Auto-generated constructor stub
+	@Override
+	public void processMessage(UIViewContext context) {
+		super.processMessage(context);
 	}
 
 }
