@@ -10,7 +10,6 @@ import za.co.fnb.pe.framework.entity.header.Location;
 public class DeviceSupportsLocationServicesController implements UIController {
 	private static final Logger LOG = Logger.getLogger(DeviceSupportsLocationServicesController.class);
 
-	@Override
 	public String processMessage(UIControllerContext context) {
 		// first check if the device supports location based services
 		Location gps = context.getRequest().getLocation();

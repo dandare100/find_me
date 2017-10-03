@@ -14,7 +14,7 @@ public class CustomerView extends ISView {
 		context.getClipboard().put("coid", customer.getCompany() == 0 ? "N/A" : customer.getCompany());
 		context.getClipboard().put("name", customer.getFirstName() == null || customer.getFirstName().isEmpty() ? "N/A" : StringUtil.applyCamelCaseRules(customer.getFirstName()));
 		context.getClipboard().put("surname", customer.getLastName() == null || customer.getLastName().isEmpty() ? "N/A" : StringUtil.applyCamelCaseRules(customer.getLastName()));
-		context.getClipboard().put("cellnumber", customer.getCellNumber() == null || customer.getIdNumber().isEmpty() ? "N/A" : customer.getCellNumber());
+//		context.getClipboard().put("cellnumber", customer.getCellNumber() == null || customer.getIdNumber().isEmpty() ? "N/A" : customer.getCellNumber());
 		context.getClipboard().put("idnumber", customer.getIdNumber() == null || customer.getIdNumber().isEmpty() ? "N/A" : customer.getIdNumber());
 		super.processMessage(context);
 	}
