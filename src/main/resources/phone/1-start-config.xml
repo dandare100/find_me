@@ -89,7 +89,7 @@
 	</ui>
 	
 	<ui id="ui.findmelocator.office.locator.search.view"
-		template="ocep.phone.instant.services" 
+		template="ocep.phone.mm.view" 
 		persistance="NONE" 
 		class="za.co.fnb.findmelocator.ocep.views.OfficeLocatorSearchView" >
 		
