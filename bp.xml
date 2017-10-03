@@ -22,7 +22,8 @@
 
 	<!-- PROJECTS ARCHITECTURE WORK LIKE THIS													-->	
 	<!-- APP (WAR) -- > WS -- > PEP (WAR) -- > WS -- > BE (WAR) -- > JDBC -- > MYSQL/POSTGERS 	-->
-	
+
+
 	<!-- THE PROJECTS HOST NAMES FOLLOW THE BLOW CONVENTION 											-->
 	<!-- bpt-app.fnb.co.za -- > pep.fnb.co.za/bpt-pep -- > bpt-be.fnb.co.za -- > bpt-db-mysql.fnb.co.za -->
 	<!-- BPTApp BPT-PEP BPT-BE BPT-PostGres -->		
