@@ -39,9 +39,9 @@
 		</overviews>
 
 		<buttoncarousel bgcolor="#FFFFFF">
-			<iconbutton key="customer"    order="0" uiid="ui.findmelocator.customer.view"     							parent="me"    text="Customer Info" iconid="resource.findmelocator.customer" skins="fnb,rmb" />
-			<iconbutton key="device"      order="1" uiid="ui.findmelocator.device.view"									parent="me"    text="Device Info"   iconid="resource.findmelocator.device"   skins="fnb,rmb"/>
-       		<iconbutton key="office"     order="3" uiid="ui.findmelocator.office.locator.view"							parent="me"    text="Office Locator"   iconid="resource.findmelocator.office"   skins="fnb,rmb"/>
+			<iconbutton key="customer"    order="0" uiid="ui.findmelocator.customer.view"     							parent="me"    text="ATM" iconid="resource.findmelocator.customer" skins="fnb,rmb" />
+			<iconbutton key="device"      order="1" uiid="ui.findmelocator.device.view"									parent="me"    text="Branch"   iconid="resource.findmelocator.device"   skins="fnb,rmb"/>
+       		<iconbutton key="office"     order="2" uiid="ui.findmelocator.office.locator.view"							parent="me"    text="Office"   iconid="resource.findmelocator.office"   skins="fnb,rmb"/>
        		
         </buttoncarousel>
 	</ui>
