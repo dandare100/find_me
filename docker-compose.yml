@@ -1,0 +1,22 @@
+version: "2"
+
+networks:
+  bp-network:
+    external: true
+
+services:
+  bpt.be:
+    image: dockregppd.scratchbox.fnb.co.za/bpt/javaweb:latest
+    container_name: "bpt.be"
+    volumes:
+      - ./src/main/webapp:/webapp.war
+      - ./docker/jboss_extra_vm_args.conf:/home/appuser/jboss/bin/standalone.conf.extras
+      - ./docker/settings.cache:/home/appuser/jboss/settings.cache
+    networks:
+      - bp-network
+    ports:
+      - "0.0.0.0:8901:8901"
+    environment:
+      - DEBUG=false
+      - EXTRA_OPTS=-DPLATFORM_EXTENSION_ENVIRONMENT=PREPROD
+

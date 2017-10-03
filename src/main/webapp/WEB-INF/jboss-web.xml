@@ -1,0 +1,5 @@
+
+<jboss-web>
+        <context-root>/findmelocator</context-root>
+</jboss-web>
+

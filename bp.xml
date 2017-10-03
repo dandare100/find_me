@@ -1,0 +1,29 @@
+<!-- 
+	PLEASE REFER TO DOCS FOR MORE INFORMATION
+	http://jira.fnbconnect.co.za:8090/display/PE 
+-->
+<bp>
+	<!--  Unique key for bank platform project -->
+	<key>bpt</key>
+	
+	<!-- Icon Name to be displayed on App and Online World 								-->
+	<!-- Please update resource.findmelocator.icon images under resources folder to required icon -->
+	<name>BankPlatformProjectTemplate</name>
+
+	<!-- World to place app -->	
+	<!--  					-->
+	<!-- OPTIONS: CITIZEN 	-->
+	<world>${WORLD}</world>
+
+	<!-- Project Type 							-->
+	<!--  										-->
+	<!-- OPTIONS: APP/WEB -- > PEP -- > BE		-->	
+	<projecttype>${PROJECTTYPE}</projecttype>
+
+	<!-- PROJECTS ARCHITECTURE WORK LIKE THIS													-->	
+	<!-- APP (WAR) -- > WS -- > PEP (WAR) -- > WS -- > BE (WAR) -- > JDBC -- > MYSQL/POSTGERS 	-->
+	
+	<!-- THE PROJECTS HOST NAMES FOLLOW THE BLOW CONVENTION 											-->
+	<!-- bpt-app.fnb.co.za -- > pep.fnb.co.za/bpt-pep -- > bpt-be.fnb.co.za -- > bpt-db-mysql.fnb.co.za -->
+	<!-- BPTApp BPT-PEP BPT-BE BPT-PostGres -->		
+</bp>

@@ -1,0 +1,17 @@
+url=http\://127.0.0.1\:8901/findmelocator
+ucn=12345
+country=15
+resourcerouting=resource.digital.*
+modelrouting=model.findmelocator.*
+gomez=127.0.0.1
+uirouting=ui.findmelocator.*
+vods=false
+fester=127.0.0.1
+authenticated=true
+timeout=10
+value1=123456
+key1=redirectString
+description=BankPlatform Project
+voip=true
+startuiid=ui.findmelocator.start
+

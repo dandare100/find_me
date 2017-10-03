@@ -1,0 +1,157 @@
+<?xml version='1.0' standalone='yes'?>
+<ui-component>
+
+	<!--********************************************* 
+					ENTRY POINTS
+		*********************************************-->
+	<controller id="ui.findmelocator.start" class="za.co.fnb.findmelocator.ocep.controllers.DoNothingController" >
+		<mapping mapping="default"   destination="ui.findmelocator.start.view" />
+	</controller>
+	
+
+	<!--********************************************* 
+						VIEWS
+	    *********************************************-->
+	<ui id="ui.findmelocator.start.view"
+		template="ocep.phone.overview"
+		persistance="NONE"
+		class="za.co.fnb.findmelocator.ocep.views.StartView" >
+
+		<!--  Navigation Section -->
+		<title text="ATM, Branch + Office Locator" />
+		<leftbutton type="NAVIGATE"
+					 text="Back"
+					 uiid="ui.start"
+					 parent="me"/>
+					 
+		<!--  Data Section -->
+		<overviews>
+			<overview id="overview_1" bgcolour="#FFFFFF">
+			<overviewpanel  id="overview_panel_1"
+							heading="to_be_set_from_view"
+							text="Please Select"
+							iconid="resource.findmelocator.tag"
+							type="DOORS"
+							color="#FFFFFF"
+							alpha="0"
+							index="1"/>
+			</overview>
+		</overviews>
+
+		<buttoncarousel bgcolor="#FFFFFF">
+			<iconbutton key="customer"    order="0" uiid="ui.findmelocator.customer.view"     							parent="me"    text="Customer Info" iconid="resource.findmelocator.customer" skins="fnb,rmb" />
+			<iconbutton key="device"      order="1" uiid="ui.findmelocator.device.view"									parent="me"    text="Device Info"   iconid="resource.findmelocator.device"   skins="fnb,rmb"/>
+       		<iconbutton key="office"     order="3" uiid="ui.findmelocator.office.locator.view"							parent="me"    text="Office Locator"   iconid="resource.findmelocator.office"   skins="fnb,rmb"/>
+       		
+        </buttoncarousel>
+	</ui>
+	
+	<ui id="ui.findmelocator.customer.view"
+		template="ocep.phone.instant.services" 
+		persistance="NONE" 
+		class="za.co.fnb.findmelocator.ocep.views.CustomerView" >
+		
+		<!--  Navigation Section -->
+		<title text="ATM" />
+		<leftbutton text="Back" 
+					uiid="ui.findmelocator.start.view" 
+					parent="me" 
+					type="NAVIGATE"/>
+					  
+		<!-- Form Fields -->		
+		<instruction text="You're personal information" />	  
+				  
+	  	<controls key="info"
+				  type="LABEL"
+				  label="customer.info"/>
+				  
+	</ui>
+	
+	<ui id="ui.findmelocator.device.view"
+		template="ocep.phone.instant.services" 
+		persistance="NONE" 
+		class="za.co.fnb.findmelocator.ocep.views.DeviceView" >
+		
+		<!--  Navigation Section -->
+		<title text="Branch" />
+		<leftbutton text="Back" 
+					uiid="ui.findmelocator.start.view" 
+					parent="me" 
+					type="NAVIGATE"/>
+					  
+		<!-- Form Fields -->		
+		<instruction text="You're device's information" />	  
+				  
+	  	<controls key="info"
+				  type="LABEL"
+				  label="device.info"/>
+				  
+	</ui>
+	
+	<ui id="ui.findmelocator.office.locator.view"
+		template="ocep.phone.instant.services" 
+		persistance="NONE" 
+		class="za.co.fnb.findmelocator.ocep.views.OfficeLocatorView" >
+		
+		<!--  Navigation Section -->
+		<title text="Office" />
+		<leftbutton text="Back" 
+					uiid="ui.findmelocator.start.view" 
+					parent="me" 
+					type="NAVIGATE"/>
+					  
+		<!-- Form Fields -->		
+		<instruction text="You're device's information" />	  
+				  
+	  	<controls key="info"
+				  type="LABEL"
+				  label="office.info"/>
+				  
+	</ui>
+	
+	<!-- <controller id="ui.findmelocator.device.supports.location.services.controller" class="za.co.fnb.findmelocator.ocep.controllers.DeviceSupportsLocationServicesController" >
+		<mapping mapping="notsupported" destination="ui.findmelocator.gps.not.supported" />
+		<mapping mapping="supported" 	destination="ui.findmelocator.location.view" />
+	</controller> -->
+	
+	<!-- <ui id="ui.findmelocator.location.view"
+		template="ocep.phone.instant.services" 
+		persistance="NONE" 
+		class="za.co.fnb.findmelocator.ocep.views.GPSView" >
+		
+		 Navigation Section
+		<title text="GPS Location" />
+		<leftbutton text="Back" 
+					uiid="ui.findmelocator.start.view" 
+					parent="me" 
+					type="NAVIGATE"/>
+					  
+		Form Fields		
+		<instruction text="You are here" />	  
+				  
+	  	<controls key="map"
+				  type="MAP"
+				  label=""
+				  value="0.00,0.00"/>
+				  
+	</ui>  -->
+	
+	<ui id="ui.findmelocator.gps.not.supported"
+		template="ocep.phone.result"
+		persistance="NONE"
+		class="za.co.fnb.pe.framework.util.views.ResultView" >
+
+		<!--  Navigation Section -->
+		<title text="GPS Location" />
+		<leftbutton type="NAVIGATE"
+					text="Back"
+					uiid="ui.findmelocator.start.view"
+					parent="me" />
+
+		<!-- Data Section -->
+		<instruction text="Location cannot be determined" />
+		<content iconid="resource.findmelocator.error"
+				 text="gps.not.supported" />
+	</ui>
+		
+</ui-component>

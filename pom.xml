@@ -1,0 +1,41 @@
+<project 
+	xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>za.co.fnb.bpt</groupId>
+	<artifactId>findmelocator</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<name>BankPlatformProjectTemplate</name>
+	<url>http://maven.apache.org</url>
+	
+	<dependencies>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <scope>provided</scope>
+		    <version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>za.co.fnb.pe</groupId>
+			<artifactId>framework</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/platform-extension-framework.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/log4j.jar</systemPath>
+		</dependency>
+	</dependencies>
+    <build>
+        <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+		<finalName>bpt</finalName>
+	</build>
+</project>
