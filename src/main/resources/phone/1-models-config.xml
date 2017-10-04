@@ -2,7 +2,7 @@
 <ui-component>
 
 	<!-- MODELS -->
-	<model id="model.findmelocator.search" class="za.co.fnb.findmelocator.ocep.models.OfficeLocatorSearchModel.java" />
+	<model id="model.findmelocator.search" class="za.co.fnb.findmelocator.ocep.models.OfficeLocatorSearchModel" />
 	
 </ui-component>
 
