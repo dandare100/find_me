@@ -4,6 +4,8 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import za.co.fnb.pe.framework.utils.CoreStringUtil;
+
 public class StringUtil {
 
 	public static String applyTextCamelCaseRules(String sentence) {
@@ -117,5 +119,7 @@ public class StringUtil {
 	public static String[] EXCEPTIONS = { "INT", "FNB", "PC", "PW", "RMB", "RMBPB", "PB", "KFC", "FNBACP", "BP", "PnP", "VoiP", "eBucks", "co", "ADSL", "za", "8.ta", "BlackBerry", "MTN", "KFC", "MyNotice", "MyMeg", "FNBCI", "USD", "GBP", "EUR", "KB",
 			"MB", "GB", "TB", "SMS", "SMSs", "iPhone", "iPad", "iPod", "PEP", "OTP", "eWallet", "GEO", "HTC", "1G", "2G", "3G", "3GS", "4G", "4S", "5G", "iTunes", "eB", "CNY", "SIM", "GHS", "BoxOffice", "DStv", "GOtv", "FNBy" };
 
-
+	public static String sortableASCIIString(int number) {
+		return CoreStringUtil.padNumeric(number, 5);
+	}
 }

@@ -94,7 +94,7 @@
 	</ui>
 	
 	<ui id="ui.findmelocator.office.locator.search.view"
-		template="ocep.phone.mm.view" 
+		template="ocep.phone.instant.services" 
 		persistance="NONE" 
 		class="za.co.fnb.findmelocator.ocep.views.OfficeLocatorSearchView" >
 		
@@ -105,14 +105,55 @@
 					parent="me" 
 					type="NAVIGATE"/>
 		
-					  
+		<rightbutton text="Search" 
+					 uiid="ui.findmelocator.map.view" 
+					 type="NAVIGATE"  
+					 parent="me" />
+		
 		<!-- Form Fields -->		
 		<instruction text="Search for Offices" />	  
 				  
-	  	<controls key="info"
-				  type="LABEL"
-				  label="office.info"/>
-				  
+	   <controls key="office.location.province.search.label" 
+           type="LABEL" 
+           label="Province" />   
+           
+	   <controls key="officelocation.province.dropdown"
+	           type="DROP_DOWN"
+	           buttontext="Search"
+	           label=""
+	           hint="Please Select"
+	           displayfield="text"
+	           sortfield="text"
+	           title="Please select"
+	           requesttype="model.findmelocator.search"
+	           parent="office.location.province"
+	           rowtype="ONE"
+	           left="text"
+	           right=""
+	           iconid="" 
+	           value="id.officelocation.${province.location}"
+	           datatype="dropdownoption" /> 
+	           
+	   <controls key="office.location.office.search.label" 
+           type="LABEL" 
+           label="Office" />   
+           
+	   <controls key="officelocation.office.dropdown"
+	           type="DROP_DOWN"
+	           buttontext="Search"
+	           label=""
+	           hint="Please Select"
+	           displayfield="text"
+	           sortfield="text"
+	           title="Please select"
+	           requesttype="model.findmelocator.search"
+	           parent="office.location.office"
+	           rowtype="ONE"
+	           left="text"
+	           right=""
+	           iconid="" 
+	           value="id.officelocation.${office.location}"
+	           datatype="dropdownoption" /> 
 	</ui>
 	
 	<!-- <controller id="ui.findmelocator.device.supports.location.services.controller" class="za.co.fnb.findmelocator.ocep.controllers.DeviceSupportsLocationServicesController" >
@@ -120,27 +161,25 @@
 		<mapping mapping="supported" 	destination="ui.findmelocator.location.view" />
 	</controller> -->
 	
-	<!-- <ui id="ui.findmelocator.location.view"
-		template="ocep.phone.instant.services" 
-		persistance="NONE" 
-		class="za.co.fnb.findmelocator.ocep.views.GPSView" >
-		
-		 Navigation Section
-		<title text="GPS Location" />
-		<leftbutton text="Back" 
-					uiid="ui.findmelocator.start.view" 
-					parent="me" 
-					type="NAVIGATE"/>
-					  
-		Form Fields		
-		<instruction text="You are here" />	  
-				  
-	  	<controls key="map"
-				  type="MAP"
-				  label=""
-				  value="0.00,0.00"/>
-				  
-	</ui>  -->
+	<ui id="ui.findmelocator.map.view"
+              template="ocep.phone.instant.services"
+              persistance="NONE"
+              class="za.co.fnb.findmelocator.ocep.views.GPSView" >
+             
+              <title text="GPS Location" />
+              <leftbutton text="Back"
+                                  uiid="ui.findmelocator.start.view"
+                                  parent="me"
+                                  type="NAVIGATE"/>
+                                               
+              <instruction text="You are here" />     
+                             
+              <controls key="map"
+                             type="MAP"
+                             label=""
+                             value="0.00,0.00"/>
+                            
+    </ui>
 	
 	<ui id="ui.findmelocator.gps.not.supported"
 		template="ocep.phone.result"

@@ -1,0 +1,8 @@
+<?xml version='1.0' standalone='yes'?>
+<ui-component>
+
+	<!-- MODELS -->
+	<model id="model.findmelocator.search" class="za.co.fnb.findmelocator.ocep.models.OfficeLocatorSearchModel.java" />
+	
+</ui-component>
+

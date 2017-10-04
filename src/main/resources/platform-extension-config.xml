@@ -4,5 +4,6 @@
 	model-extension-prefix="model.findmelocator." >
 
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./phone/1-start-config.xml"/>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./phone/1-models-config.xml" />
 	
 </ui-framework>
