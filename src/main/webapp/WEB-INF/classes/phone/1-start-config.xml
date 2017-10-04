@@ -39,9 +39,9 @@
 		</overviews>
 
 		<buttoncarousel bgcolor="#FFFFFF">
-			<iconbutton key="customer"    order="0" uiid="ui.findmelocator.customer.view"     							parent="me"    text="Customer Info" iconid="resource.findmelocator.customer" skins="fnb,rmb" />
-			<iconbutton key="device"      order="1" uiid="ui.findmelocator.device.view"									parent="me"    text="Device Info"   iconid="resource.findmelocator.device"   skins="fnb,rmb"/>
-       		<iconbutton key="office"     order="3" uiid="ui.findmelocator.office.locator.view"							parent="me"    text="Office Locator"   iconid="resource.findmelocator.office"   skins="fnb,rmb"/>
+			<iconbutton key="customer"    order="0" uiid="ui.findmelocator.customer.view"     							parent="me"    text="ATM" iconid="resource.findmelocator.customer" skins="fnb,rmb" />
+			<iconbutton key="device"      order="1" uiid="ui.findmelocator.device.view"									parent="me"    text="Branch"   iconid="resource.findmelocator.device"   skins="fnb,rmb"/>
+       		<iconbutton key="office"     order="2" uiid="ui.findmelocator.office.locator.search.view"							parent="me"    text="Office"   iconid="resource.findmelocator.office"   skins="fnb,rmb"/>
        		
         </buttoncarousel>
 	</ui>
@@ -88,10 +88,10 @@
 				  
 	</ui>
 	
-	<ui id="ui.findmelocator.office.locator.view"
-		template="ocep.phone.instant.services" 
+	<ui id="ui.findmelocator.office.locator.search.view"
+		template="ocep.phone.mm.view" 
 		persistance="NONE" 
-		class="za.co.fnb.findmelocator.ocep.views.OfficeLocatorView" >
+		class="za.co.fnb.findmelocator.ocep.views.OfficeLocatorSearchView" >
 		
 		<!--  Navigation Section -->
 		<title text="Office" />
@@ -99,9 +99,10 @@
 					uiid="ui.findmelocator.start.view" 
 					parent="me" 
 					type="NAVIGATE"/>
+		
 					  
 		<!-- Form Fields -->		
-		<instruction text="You're device's information" />	  
+		<instruction text="Search for Offices" />	  
 				  
 	  	<controls key="info"
 				  type="LABEL"
