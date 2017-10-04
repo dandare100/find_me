@@ -1,52 +1,54 @@
 <?xml version='1.0' standalone='yes'?>
 <ui-component>
 
-    <!--*********************************************
-                    ENTRY POINTS
-        *********************************************-->
-    <controller id="ui.findmelocator.start" class="za.co.fnb.findmelocator.ocep.controllers.DoNothingController">
-        <mapping mapping="default" destination="ui.findmelocator.start.view"/>
-    </controller>
+	<!--********************************************* 
+					ENTRY POINTS
+		*********************************************-->
+	<controller id="ui.findmelocator.start" class="za.co.fnb.findmelocator.ocep.controllers.DoNothingController" >
+		<mapping mapping="default"   destination="ui.findmelocator.start.view" />
+	</controller>
+	
 
+	<!--********************************************* 
+						VIEWS
+	    *********************************************-->
+	<ui id="ui.findmelocator.start.view"
+		template="ocep.phone.overview"
+		persistance="NONE"
+		class="za.co.fnb.findmelocator.ocep.views.StartView" >
 
-    <!--*********************************************
-                        VIEWS
-        *********************************************-->
-    <ui id="ui.findmelocator.start.view"
-        template="ocep.phone.overview"
-        persistance="NONE"
-        class="za.co.fnb.findmelocator.ocep.views.StartView">
+		<!--  Navigation Section -->
+		<title text="ATM, Branch + Office Locator" />
+		<leftbutton type="NAVIGATE"
+					 text="Back"
+					 uiid="ui.start"
+					 parent="me"/>
+					 
+		<!--  Data Section -->
+		<overviews>
+			<overview id="overview_1" bgcolour="#FFFFFF">
+			<overviewpanel  id="overview_panel_1"
+							heading="to_be_set_from_view"
+							text="Please Select"
+							iconid="resource.findmelocator.tag"
+							type="DOORS"
+							color="#FFFFFF"
+							alpha="0"
+							index="1"/>
+			</overview>
+		</overviews>
 
-        <!--  Navigation Section -->
-        <title text="ATM, Branch + Office Locator"/>
-        <leftbutton type="NAVIGATE"
-                    text="Back"
-                    uiid="ui.findmelocator.start"
-                    parent="me"/>
-
-        <!--  Data Section -->
-        <overviews>
-            <overview id="overview_1" bgcolour="#FFFFFF">
-                <overviewpanel id="overview_panel_1"
-                               heading="to_be_set_from_view"
-                               text="Please Select"
-                               iconid="resource.findmelocator.locationMarker"
-                               type="DOORS"
-                               color="#FFFFFF"
-                               alpha="0"
-                               index="1"/>
-            </overview>
-        </overviews>
-
-        <buttoncarousel bgcolor="#FFFFFF">
-            <iconbutton key="customer" order="0" uiid="ui.findmelocator.customer.view" parent="me" text="ATM"
-                        iconid="resource.findmelocator.gps" skins="fnb,rmb"/>
-            <iconbutton key="gps" order="1" uiid="ui.findmelocator.device.view" parent="me" text="Branch"
-                        iconid="resource.findmelocator.branch" skins="fnb,rmb"/>
-            <iconbutton key="office" order="2" uiid="ui.findmelocator.office.locator.search.view" parent="me"
-                        text="Office" iconid="resource.findmelocator.office" skins="fnb,rmb"/>
-
-        </buttoncarousel>
+	<buttoncarousel bgcolor="#FFFFFF">
+			<iconbutton key="customer" order="0"
+				uiid="ui.findmelocator.customer.view" parent="me" text="ATM"
+				iconid="resource.findmelocator.gps" skins="fnb,rmb" />
+			<iconbutton key="gps" order="1" uiid="ui.findmelocator.device.view"
+				parent="me" text="Branch" iconid="resource.findmelocator.branch"
+				skins="fnb,rmb" />
+			<iconbutton key="office" order="2"
+				uiid="ui.findmelocator.office.locator.search.view" parent="me" text="Office"
+				iconid="resource.findmelocator.office" skins="fnb,rmb" />
+	</buttoncarousel>
 	</ui>
 	
 	<ui id="ui.findmelocator.customer.view"
@@ -92,7 +94,7 @@
 	</ui>
 	
 	<ui id="ui.findmelocator.office.locator.search.view"
-		template="ocep.phone.instant.services" 
+		template="ocep.phone.mm.view" 
 		persistance="NONE" 
 		class="za.co.fnb.findmelocator.ocep.views.OfficeLocatorSearchView" >
 		
@@ -145,17 +147,17 @@
 		persistance="NONE"
 		class="za.co.fnb.pe.framework.util.views.ResultView" >
 
-        <!--  Navigation Section -->
-        <title text="GPS Location"/>
-        <leftbutton type="NAVIGATE"
-                    text="Back"
-                    uiid="ui.findmelocator.start.view"
-                    parent="me"/>
+		<!--  Navigation Section -->
+		<title text="GPS Location" />
+		<leftbutton type="NAVIGATE"
+					text="Back"
+					uiid="ui.findmelocator.start.view"
+					parent="me" />
 
-        <!-- Data Section -->
-        <instruction text="Location cannot be determined"/>
-        <content iconid="resource.findmelocator.error"
-                 text="gps.not.supported"/>
-    </ui>
-
+		<!-- Data Section -->
+		<instruction text="Location cannot be determined" />
+		<content iconid="resource.findmelocator.error"
+				 text="gps.not.supported" />
+	</ui>
+		
 </ui-component>
